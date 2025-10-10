@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Open Source Challenge"
+authors:
+  - family-names: "Lippert"
+    given-names: "David"
+    orcid: "https://orcid.org/0009-0003-6444-9595"
+date-released: "2025-10-10"
+version: "1.0.0"
