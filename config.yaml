@@ -1,0 +1,180 @@
+# App Configuration File
+# Edit this file to customize your sorting app
+
+app:
+  title: "🎯 Interactive Open Source Challenge"
+  instructions: "Drag and drop the logos into the correct categories."
+  instructions_detail: "Hover over logos and incorrect answers to learn more."
+  submit_button_text: "Submit Answers"
+  reset_button_text: "Reset"
+  correct_message: "✅ Correct!"
+  incorrect_message: "❌ This should be in <strong>%s</strong>"
+  score_message: "📊 Your Score: %d/%d (%d%%)"
+
+  # Branding section (optional)
+  branding:
+    text: "Brought to you by the GW OSPO"
+    url: "https://ospo.gwu.edu"
+    logo: "images/gw-ospo.png"  # Path to your logo image
+
+bins:
+  - id: closed
+    title: "Proprietary"
+  - id: open
+    title: "Open Source"
+
+items:
+  - id: adobe
+    name: Adobe
+    logo: "images/Adobe.png"
+    description: "Tools for creativity including Photoshop, Illustrator, and Premiere Pro"
+    correct_bin: closed
+    explanation: "Adobe was founded in 1982 as a company built around proprietary creative software like Photoshop and Illustrator, maintaining control to protect intellectual property and monetization through licensing and subscriptions"
+
+  - id: android
+    name: Android
+    logo: "images/Android.png"
+    description: "A mobile operating system for smartphones and tablets"
+    correct_bin: open
+    explanation: "Google released Android under the Apache License in 2008 to accelerate mobile innovation and adoption, building on the Linux kernel and the Open Handset Alliance's vision of a free, customizable mobile platform."
+
+  - id: bluesky
+    name: Bluesky
+    logo: "images/Bluesky.png"
+    description: "A social media app"
+    correct_bin: open
+    explanation: "Blusky was launched in 2021 as a decentralized social networking initiative originally funded by Twitter, aiming to foster transparency, interoperability, and user control through its open AT Protocol."
+
+  - id: chatgpt
+    name: ChatGPT
+    logo: "images/ChatGPT.png"
+    description: "An AI-powered conversational agent"
+    correct_bin: closed
+    explanation: "ChatGPT is developed by OpenAI but despite having Open in their name all of the underlying code and models for ChatGPT are proprietary."
+
+  - id: docker
+    name: docker
+    logo: "images/docker.png"
+    description: "A platform designed to help developers build, share, and run container applications"
+    correct_bin: open
+    explanation: "dotCloud released docker in 2013 under the Apache 2.0 license to accelerate adoption of container technology, enabling developers to build, share, and run applications consistently across environments."
+
+  - id: drupal
+    name: Drupal
+    logo: "images/Drupal.png"
+    description: "Content Management System (CMS) to create, manage, and publish website content"
+    correct_bin: open
+    explanation: "Dries Buytaert released Drupal under the GNU General Public License in 2001 transforming it from a personal project into one of the most widely used content management systems in the world."
+  
+  - id: facebook
+    name: Facebook
+    logo: "images/Facebook.png"
+    description: "A social media app"
+    correct_bin: closed
+    explanation: "Facebook was launched in 2004 as a proprietary platform by Mark Zuckerberg and his team to retain control over its codebase, user data, and monetization strategy."
+
+  - id: gimp
+    name: GIMP
+    logo: "images/GIMP.png"
+    description: "An image editor"
+    correct_bin: open
+    explanation: "In 1995 Spencer Kimball and Peter Mattis released GIMP under the GNU General Public License as a free alternative to proprietary image editing software, to empower creative freedom and community-driven innovation."
+
+  - id: github
+    name: GitHub
+    logo: "images/GitHub.png"
+    description: "A platform that allows developers to create, store, manage, and share code"
+    correct_bin: closed
+    explanation: "Even though GitHub hosts the majority of open source projects globally, GitHub itself is not open source.  It was launched in 2008 as a proprietary platform and is now owned by Microsoft."
+
+  - id: gmail
+    name: Gmail
+    logo: "images/Gmail.png"
+    description: "An email service"
+    correct_bin: closed
+    explanation: "Though Gmail is free to use, it is not open source, rather Google launched it in 2004 as a proprietary webmail service to maintain control over its infrastructure, user data, and monetization through advertising."
+
+  - id: jupyter
+    name: jupyter
+    logo: "images/jupyter.png"
+    description: "A web-based interactive computing platform"
+    correct_bin: open
+    explanation: "The IPython project, now jupyter, was released in 2014 under a permissive BSD license to promote interactive computing and reproducible research across languages, empowering a global community in data science and education."
+
+  - id: linux
+    name: Linux 
+    logo: "images/Linux.png"
+    description: "An operating system"
+    correct_bin: open
+    explanation: "Linus Torvalds released Linux under the GNU General Public License in 1991 marking a pivotal moment in the rise of community-driven software development."
+  
+  - id: mailchimp
+    name: mailchimp
+    logo: "images/mailchimp.png"
+    description: "An email marketing platform"
+    correct_bin: closed
+    explanation: "Launched in 2001 as a proprietary email marketing platform to retain control over its features, user data, and monetization, evolving into a major SaaS provider before being acquired by Intuit in 2021"
+
+  - id: openstreetmap
+    name: OpenStreetMap
+    logo: "images/OpenStreetMap.png"
+    description: "A free wiki world map"
+    correct_bin: open
+    explanation: "In 2004 Steve Coast developed OpenStreetMap to democratize geographic data access, allowing anyone to freely edit and use maps under the Open Database License in response to restrictive licensing of proprietary mapping services."
+
+  - id: python
+    name: python
+    logo: "images/python.png"
+    description: "A programming language"
+    correct_bin: open
+    explanation: "Guido van Rossum, released python in 1991 under a permissive license to promote accessibility and collaboration, helping it grow into one of the most widely used programming languages in the world."
+
+  - id: r
+    name: R
+    logo: "images/R.png"
+    description: "A programming language"
+    correct_bin: open
+    explanation: "Ross Ihaka and Robert Gentleman released R in 1995 under the GNU General Public License to provide a free, collaborative alternative to proprietary statistical software like S, fostering rapid growth in data science and academic research."
+
+  - id: react
+    name: React
+    logo: "images/React.png"
+    description: "A library for web and native user interfaces"
+    correct_bin: open
+    explanation: "Meta released React under the MIT License in 2013 to encourage widespread adoption and community-driven development of its UI library, which revolutionized front-end web architecture with component-based design."
+
+  - id: slack
+    name: slack
+    logo: "images/slack.png"
+    description: "A team communication platform"
+    correct_bin: closed
+    explanation: "Stewart Butterfield launched slack in 2013 as a proprietary communication platform to maintain control over its features, integrations, and monetization, distinguishing itself from open-source alternatives like Mattermost and Zulip"
+
+  - id: tiktok
+    name: TikTok
+    logo: "images/TikTok.png"
+    description: "A social media app"
+    correct_bin: closed
+    explanation: "ByteDance maintains proprietary control over TikTok's algorithms, infrastructure, and user data to protect its competitive advantage and monetization strategy, despite global scrutiny over transparency and privacy."
+
+  - id: whatsapp
+    name: WhatsApp
+    logo: "images/WhatsApp.png"
+    description: "An instant messaging and Voice over IP service"
+    correct_bin: closed
+    explanation: "Developed as a proprietary messaging app to protect its end-to-end encryption and monetization strategy, especially after its 2014 acquisition by Facebook (now Meta), which prioritized platform control and data integration"
+
+  - id: wordpress
+    name: WordPress
+    logo: "images/WordPress.png"
+    description: "A web publishing tool"
+    correct_bin: open
+    explanation: "Matt Mullenweg and Mike Little released WordPress under the GNU General Public License in 2003, building on the b2/cafelog blogging software to empower a global community to freely create, share, and improve web publishing tools."
+  
+  - id: x
+    name: X
+    logo: "images/X.png"
+    description: "A social media app"
+    correct_bin: closed
+    explanation: "X (formerly Twitter) is not open source because its core platform has remained proprietary since its 2006 launch to retain control over user data, monetization, and moderation, despite releasing some open-source tools and frameworks over the years."
+
