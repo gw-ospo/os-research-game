@@ -2,6 +2,8 @@
 
 This project is meant to be a fun simple challenge to help education a broad audience about open source.
 
+Here is the link to the free hosted [Open Source Challenge](https://gw-ospo.shinyapps.io/os-challenge/) shiny app.  Note: no data is being recorded or stored.
+
 Our GW OSPO Team came up with this fun activity that we have use when tabling at various events and we decided to digitize our physical version to make it more accessible.  We love the conversations and aha moments that we see when people learn which projects are open source and which are proprietary or closed.
 
 We strongly encourage sharing of this code and project and we encourage contributions as well.
