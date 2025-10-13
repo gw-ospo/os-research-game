@@ -20,6 +20,8 @@ We are grateful for any acknowledgement or citations.
 
 Please see our CITATION.cff file
 
+And in the spirit of attribution we'd like to thank Pingfan Hu and JP Helveston for their support answering questions regarding the architecture.
+
 ## License
 
 MIT License
