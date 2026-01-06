@@ -5,7 +5,7 @@ Please follow the following guidelines to make your contributions:
 
 ## Forking
 
-* Please fork the project using the fork button at the top of the [main project page](https://github.com/gw-ospo/gw-os-challenge)
+* Please fork the project using the fork button at the top of the [main project page](https://github.com/gw-ospo/os-research-game)
 * Make your proposed changes inside your fork.
 * Test your build locally.
 * Commit to your fork.

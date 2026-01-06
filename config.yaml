@@ -2,7 +2,7 @@
 # Edit this file to customize your sorting app
 
 app:
-  title: "🎯 Interactive Open Source Challenge"
+  title: "🎯 Interactive Open Source Game"
   instructions: "Drag and drop the logos into the correct categories."
   instructions_detail: "Hover over logos and incorrect answers to learn more."
   submit_button_text: "Submit Answers"
