@@ -1,0 +1,12 @@
+name: os-research-game
+title: os-research-game
+username: gw-ospo
+account: gw-ospo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16379396
+bundleId: 11407355
+url: https://gw-ospo.shinyapps.io/os-research-game/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

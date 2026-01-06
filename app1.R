@@ -31,9 +31,9 @@ create_item <- function(item) {
   if (grepl("\\.(png|jpg|jpeg|gif|svg)$", item$logo, ignore.case = TRUE)) {
     logo_path <- item$logo
     logo_html <- sprintf('<img src="%s" class="item-logo-img" alt="%s" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\';">', 
-                         logo_path, item$name)
+                        logo_path, item$name)
     fallback <- sprintf('<span class="item-logo" style="display:none;">%s</span>', 
-                        substr(item$name, 1, 1))
+                       substr(item$name, 1, 1))
     logo_html <- paste0(logo_html, fallback)
   } else {
     logo_html <- sprintf('<span class="item-logo">%s</span>', item$logo)
@@ -41,7 +41,7 @@ create_item <- function(item) {
   
   # Create initial hover tooltip with name and description
   initial_tooltip <- sprintf('<div class="initial-hover-tooltip"><strong>%s</strong><br/>%s</div>', 
-                             item$name, item$description)
+                            item$name, item$description)
   
   HTML(sprintf(
     '<div class="item-box" data-id="%s" data-name="%s" data-description="%s" data-explanation="%s">
@@ -108,7 +108,6 @@ ui <- fluidPage(
   # Set the browser tab title separately
   tags$head(
     tags$title(app_config$title),
-    tags$meta(name = "viewport", content = "width=device-width, initial-scale=1.0"),
     tags$style(HTML("
       .title-container {
         display: flex;
@@ -116,12 +115,9 @@ ui <- fluidPage(
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
-        flex-wrap: wrap;
-        gap: 10px;
       }
       .main-title {
         flex: 1;
-        min-width: 200px;
       }
       .branding {
         display: flex;
@@ -129,7 +125,6 @@ ui <- fluidPage(
         gap: 10px;
         font-size: 14px;
         color: #555;
-        flex-wrap: wrap;
       }
       .branding a {
         color: #555;
@@ -143,32 +138,6 @@ ui <- fluidPage(
         height: 40px;
         width: auto;
       }
-      
-      /* Responsive layout */
-      @media (max-width: 768px) {
-        .title-container {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .branding {
-          font-size: 12px;
-        }
-        .branding-logo {
-          height: 30px;
-        }
-      }
-      
-      /* Mobile sidebar adjustments */
-      .well {
-        padding: 10px;
-      }
-      
-      @media (max-width: 991px) {
-        .col-sm-3, .col-sm-9 {
-          width: 100% !important;
-        }
-      }
-      
       .item-box {
         padding: 15px;
         margin: 5px;
@@ -180,14 +149,6 @@ ui <- fluidPage(
         transition: all 0.3s;
         position: relative;
       }
-      
-      @media (max-width: 768px) {
-        .item-box {
-          padding: 10px;
-          margin: 3px;
-        }
-      }
-      
       .item-box:hover {
         border-color: #4CAF50;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -198,13 +159,6 @@ ui <- fluidPage(
         display: block;
         margin-bottom: 5px;
       }
-      
-      @media (max-width: 768px) {
-        .item-logo {
-          font-size: 30px;
-        }
-      }
-      
       .item-logo-img {
         width: 120px;
         height: 120px;
@@ -212,14 +166,6 @@ ui <- fluidPage(
         display: block;
         margin: 0 auto 5px auto;
       }
-      
-      @media (max-width: 768px) {
-        .item-logo-img {
-          width: 80px;
-          height: 80px;
-        }
-      }
-      
       .item-name {
         font-weight: bold;
         font-size: 14px;
@@ -240,28 +186,12 @@ ui <- fluidPage(
         border-radius: 10px;
         margin-bottom: 20px;
       }
-      
-      @media (max-width: 768px) {
-        .rank-list-container {
-          min-height: 150px;
-          padding: 10px;
-        }
-      }
-      
       .bin-title {
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 15px;
         color: #333;
       }
-      
-      @media (max-width: 768px) {
-        .bin-title {
-          font-size: 16px;
-          margin-bottom: 10px;
-        }
-      }
-      
       .correct {
         border-color: #4CAF50 !important;
         background: #e8f5e9 !important;
@@ -278,20 +208,6 @@ ui <- fluidPage(
         margin-top: 5px;
         font-size: 12px;
         color: #856404;
-      }
-      
-      @media (max-width: 768px) {
-        .explanation {
-          font-size: 10px;
-          padding: 6px;
-        }
-      }
-      
-      /* Responsive bins */
-      @media (max-width: 768px) {
-        .row > div[class*='col-'] {
-          margin-bottom: 15px;
-        }
       }
       
       /* Initial hover tooltip (before submit) */
@@ -319,14 +235,6 @@ ui <- fluidPage(
         justify-content: center;
         backdrop-filter: blur(2px);
       }
-      
-      @media (max-width: 768px) {
-        .initial-hover-tooltip {
-          font-size: 11px;
-          padding: 10px;
-        }
-      }
-      
       .item-box:not(.results-shown):hover .initial-hover-tooltip {
         display: flex;
       }
@@ -356,28 +264,8 @@ ui <- fluidPage(
         justify-content: center;
         backdrop-filter: blur(2px);
       }
-      
-      @media (max-width: 768px) {
-        .result-hover-tooltip {
-          font-size: 11px;
-          padding: 10px;
-        }
-      }
-      
       .incorrect.results-shown:hover .result-hover-tooltip {
         display: flex;
-      }
-      
-      /* Score display responsiveness */
-      #score_display {
-        font-size: 16px;
-      }
-      
-      @media (max-width: 768px) {
-        #score_display {
-          font-size: 12px;
-          padding: 10px !important;
-        }
       }
     ")),
     tags$script(HTML(sprintf("
@@ -555,8 +443,8 @@ server <- function(input, output, session) {
       score_pct_excluding <- round(correct_excluding_unknown / total_excluding_unknown * 100)
       score_pct_total <- round(correct / total * 100)
       score_html <- sprintf(app_config$score_message_with_unknown, 
-                            correct_excluding_unknown, total_excluding_unknown, score_pct_excluding,
-                            correct, total, score_pct_total)
+                           correct_excluding_unknown, total_excluding_unknown, score_pct_excluding,
+                           correct, total, score_pct_total)
     } else {
       score_pct <- if (total > 0) round(correct / total * 100) else 0
       score_html <- sprintf(app_config$score_message, correct, total, score_pct)

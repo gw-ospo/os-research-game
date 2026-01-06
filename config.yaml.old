@@ -10,8 +10,6 @@ app:
   correct_message: "✅ Correct!"
   incorrect_message: "❌ This should be in <strong>%s</strong>"
   score_message: "📊 Your Score: %d/%d (%d%%)"
-  score_message_with_unknown: "📊 Score (excluding 'I Don't Know'): %d/%d (%d%%) | Total Score: %d/%d (%d%%)"
-  unknown_bin_id: "unknown"  # ID of the "I don't know" bin
 
   # Branding section (optional)
   branding:
@@ -24,9 +22,6 @@ bins:
     title: "Proprietary"
   - id: open
     title: "Open Source"
-  - id: unknown
-    title: "❓ I Don't Know"
-
 
 items:
   - id: adobe
